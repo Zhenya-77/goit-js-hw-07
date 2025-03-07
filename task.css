@@ -1,0 +1,8 @@
+.gallery {
+    display: flex;
+    list-style: none;
+  }
+  
+  .gallery li {
+    margin: 5px;
+  }
