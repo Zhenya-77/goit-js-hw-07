@@ -1,8 +1,12 @@
 .gallery {
-    display: flex;
-    list-style: none;
-  }
-  
-  .gallery li {
-    margin: 5px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.gallery img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  margin: 5px;
+}
