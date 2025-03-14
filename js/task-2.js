@@ -1,16 +1,15 @@
 const gallery = document.querySelector('.gallery');
 
-const createGallery = (images) => {
+const createGallery = () => {
   const galleryItems = images.map(image => {
-    const li = document.createElement('li');
-    const img = document.createElement('img');
-    img.src = image.url;
-    img.alt = image.alt;
-    li.appendChild(img);
-    return li;
+    return `
+      <li>
+        <img src="${image.url}" alt="${image.alt}" />
+      </li>
+    `;
   });
-
-  galleryItems.forEach(item => gallery.appendChild(item));
+  
+  gallery.insertAdjacentHTML('beforeend', galleryItems.join(''));
 };
 
-createGallery(images);
+createGallery();
